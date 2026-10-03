@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weiss · Homemade burgers from Patagonia</title>
+<meta name="description" content="Smash burgers caseras nacidas en Bariloche en 2018. Carta, burga del mes y todos los locales de Weiss en Argentina, Uruguay y México.">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="icon" href="img/logo-badge-negro.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css?v=2">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#inicio" class="nav__logo" aria-label="Weiss, inicio"><img src="img/logo-script-blanco.png" alt="Weiss" width="128" height="56"></a>
+  <nav class="nav__links" id="navLinks" aria-label="Principal">
+    <a href="#carta">Carta</a>
+    <a href="#burga-del-mes">Burga del mes</a>
+    <a href="#historia">Historia</a>
+    <a href="#locales">Locales</a>
+    <a href="#franquicias">Franquicias</a>
+    <a href="https://tr.ee/U2ODkXgbwZ" target="_blank" rel="noopener">Weiss Coffee</a>
+  </nav>
+  <div class="nav__right">
+    <div class="nav__countries" aria-label="Países">
+      <a href="https://www.instagram.com/weissburger.ar/" target="_blank" rel="noopener" class="is-on">AR</a>
+      <a href="https://www.instagram.com/weissburger.uy/" target="_blank" rel="noopener">UY</a>
+      <a href="https://www.instagram.com/weissburger.mex/" target="_blank" rel="noopener">MX</a>
+    </div>
+    <a class="btn btn--mostaza btn--sm" href="https://linktr.ee/weissburger" target="_blank" rel="noopener">Pedí online</a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero__stage">
+    <img class="hero__photo" src="img/hero-gulosa.webp" alt="" width="1100" height="733" fetchpriority="high">
+    <h1 class="hero__title"><span>ESTO ES</span> <span class="cuero">WEISS</span></h1>
+    <img class="hero__pan" src="img/hero-gulosa-pan.webp" alt="La Gulosa: doble carne, doble cheddar, bacon ahumado, aros de cebolla y huevo frito" width="1100" height="733">
+  </div>
+  <div class="hero__left">
+    <img src="img/logo-badge-blanco.png" alt="Homemade burgers from Patagonia" width="110" height="110">
+    <p>Smash burgers caseras nacidas en <b>Bariloche en 2018</b>. Hoy en Argentina, Uruguay y México.</p>
+  </div>
+  <div class="hero__right">
+    <span class="eyebrow">La Gulosa</span>
+    <p>Doble carne · doble cheddar · bacon ahumado · aros de cebolla · huevo frito</p>
+    <a class="btn btn--mostaza" href="#carta">Ver la carta</a>
+    <a class="btn btn--ghost" href="#locales">Encontrá tu Weiss</a>
+  </div>
+</section>
+
+<div class="seam" aria-hidden="true"><div class="ticker"><div class="ticker__track" id="ticker"></div></div></div>
+
+<!-- CARTA: selector -->
+<section class="carta" id="carta" data-theme="0">
+  <div class="carta__lines" aria-hidden="true"></div>
+  <div class="carta__glow" aria-hidden="true"></div>
+  <div class="carta__head">
+    <h2 class="carta__title"><svg class="blink" viewBox="0 0 10 12" aria-hidden="true"><path d="M0 0 L10 6 L0 12Z"/></svg>ELEGÍ TU BURGA<svg class="blink" viewBox="0 0 10 12" aria-hidden="true"><path d="M10 0 L0 6 L10 12Z"/></svg></h2>
+    <p class="carta__hint">Arrastrá, deslizá o usá las flechas</p>
+  </div>
+  <div class="carta__stage" id="stage" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Carta de burgas"></div>
+  <button class="carta__nav carta__nav--prev" id="prev" aria-label="Burga anterior"><svg viewBox="0 0 24 24"><path d="M15 4 L7 12 L15 20"/></svg></button>
+  <button class="carta__nav carta__nav--next" id="next" aria-label="Burga siguiente"><svg viewBox="0 0 24 24"><path d="M9 4 L17 12 L9 20"/></svg></button>
+  <div class="carta__info" aria-live="polite">
+    <div class="carta__name"><span class="carta__num" id="num">01</span><span id="bname">BACON A LO TOMI</span></div>
+    <ul class="carta__moves" id="moves"></ul>
+  </div>
+  <div class="carta__roster" id="roster" role="tablist" aria-label="Todas las burgas"></div>
+  <div class="carta__menus">
+    <span>Precios y carta completa según tu zona:</span>
+    <a href="https://tr.ee/QW8OjY7oFl" target="_blank" rel="noopener">Buenos Aires</a>
+    <a href="https://linktr.ee/weissburger" target="_blank" rel="noopener">Interior, Costa y Uruguay</a>
+    <a href="https://tr.ee/U2ODkXgbwZ" target="_blank" rel="noopener">Weiss Coffee</a>
+  </div>
+</section>
+
+<!-- BURGA DEL MES -->
+<section class="mes" id="burga-del-mes">
+  <div class="mes__copy">
+    <span class="eyebrow">Edición limitada</span>
+    <h2>LA BURGA<br>DE <span class="js-month">OCTUBRE</span></h2>
+    <p>Cada mes, una receta nueva que está un ratito y se va. Esta es la de este mes.</p>
+    <div class="mes__count"><b class="js-days">28</b><span>días para<br>probarla</span></div>
+    <a class="btn btn--blanco pulse" href="https://linktr.ee/weissburger" target="_blank" rel="noopener">Pedila ahora</a>
+  </div>
+  <div class="mes__poster">
+    <img src="img/logo-script-bordo.png" alt="Weiss" class="mes__logo" width="150" height="66">
+    <div class="mes__star" aria-hidden="true"><svg viewBox="0 0 100 100" class="spin"><path id="starPath"/></svg><span>SOLO<br><span class="js-month">OCTUBRE</span></span></div>
+    <svg class="mes__svg" id="mesSvg" role="img" aria-label="Bacon en cubos: doble carne, cheddar, bacon en cubos, cebolla caramelizada y Red BBQ"></svg>
+    <h3 class="mes__name">BACON EN CUBOS</h3>
+  </div>
+</section>
+
+<!-- HISTORIA -->
+<section class="historia" id="historia">
+  <svg class="historia__mount" viewBox="0 0 1440 220" preserveAspectRatio="none" aria-hidden="true"><path d="M0 220 L0 150 L120 70 L180 120 L300 20 L390 110 L450 80 L560 160 L660 60 L760 140 L820 100 L940 170 L1040 50 L1120 120 L1200 90 L1320 160 L1440 100 L1440 220Z"/><path class="snow" d="M300 20 L282 50 L300 42 L316 54Z M660 60 L644 88 L662 80 L676 92Z M1040 50 L1022 80 L1040 72 L1056 84Z"/></svg>
+  <div class="historia__inner">
+    <div class="historia__head">
+      <span class="eyebrow">Homemade burgers from Patagonia</span>
+      <h2>DE BARILOCHE<br><span class="cuero">AL MUNDO</span></h2>
+      <p>Tomi Weiss se fue a recorrer Estados Unidos, probó las smash burgers y se las trajo a Bariloche. La primera carta la armó con lo que le recomendaron sus seguidores. El resto es historia… y muchas burgas.</p>
+    </div>
+    <ol class="timeline">
+      <li><b>16·06·2018</b><span>Abre el primer Weiss en calle Mitre, Bariloche, el día del debut de Argentina en el Mundial.</span></li>
+      <li><b>2022</b><span>Primera franquicia: Rosario.</span></li>
+      <li><b>2025</b><span>Llega al norte y a Cuyo: Tucumán, Mendoza, Catamarca, Carlos Paz.</span></li>
+      <li><b>Dic. 2025</b><span>Cruza el charco: Punta del Este, frente al puerto.</span></li>
+      <li><b>2026</b><span>Auto Weiss en Canning, con drive-thru. Y México.</span></li>
+    </ol>
+    <div class="tomi">
+      <a class="tomi__avatar" href="https://www.instagram.com/weisstomi/" target="_blank" rel="noopener" aria-label="Instagram de Tomi Weiss"><img src="img/tomi-perfil.webp" alt="Foto de perfil de Tomi Weiss" width="320" height="320" loading="lazy"></a>
+      <div class="tomi__txt">
+        <span class="eyebrow">El que está detrás</span>
+        <h3>TOMI WEISS</h3>
+        <p>Abrió el primer Weiss con 20 años, armó la carta con las recetas que le pasaban sus seguidores y hoy es “el tiktoker de las hamburguesas”. Si lo seguís, te enterás antes que nadie de lo que se viene.</p>
+      </div>
+      <a class="btn btn--mostaza" href="https://www.instagram.com/weisstomi/" target="_blank" rel="noopener">Seguilo en @weisstomi</a>
+    </div>
+    <div class="historia__stats">
+      <div><b>27</b><span>locales</span></div>
+      <div><b>3</b><span>países</span></div>
+      <div><b>2018</b><span>desde</span></div>
+    </div>
+  </div>
+  <div class="galeria" id="galeria" aria-label="Fotos de los locales">
+    <figure><img src="img/local-fachada.webp" alt="Fachada de un Weiss con mural de montañas y cóndor" loading="lazy" width="640" height="853"></figure>
+    <figure><img src="img/mano-gulosa.webp" alt="La Gulosa en mano, con la yema chorreando" loading="lazy" width="750" height="1000"></figure>
+    <figure><img src="img/local-fuegos.webp" alt="Inauguración de un Weiss con fuegos artificiales" loading="lazy" width="640" height="853"></figure>
+    <figure><img src="img/local-salon.webp" alt="Salón con mesas de madera y paneles de triángulos" loading="lazy" width="750" height="1000"></figure>
+    <figure><img src="img/local-ciudad.webp" alt="Weiss de noche entre edificios" loading="lazy" width="750" height="1000"></figure>
+    <figure><img src="img/local-noche.webp" alt="Weiss de noche con carteles de neón" loading="lazy" width="640" height="853"></figure>
+  </div>
+</section>
+
+<!-- LOCALES -->
+<section class="locales" id="locales">
+  <div class="locales__head">
+    <span class="eyebrow">Encontrá tu Weiss</span>
+    <h2>LOCALES</h2>
+    <p>Tocá un pin para ver la dirección. Buenos Aires tiene su propio zoom.</p>
+    <div class="locales__tabs" role="tablist">
+      <button role="tab" aria-selected="true" data-view="ar">Argentina y Uruguay</button>
+      <button role="tab" aria-selected="false" data-view="amba">Buenos Aires</button>
+    </div>
+  </div>
+  <div class="locales__maps">
+    <div class="mapa mapa--ar" id="mapAr" data-view="ar"></div>
+    <div class="locales__right">
+      <div class="mapa mapa--amba" id="mapAmba" data-view="amba"></div>
+      <article class="card" id="card" aria-live="polite"></article>
+    </div>
+  </div>
+  <div class="locales__more">
+    <div class="lista" id="lista"></div>
+    <div class="mx">
+      <span class="mx__flag" aria-hidden="true"></span>
+      <div><b>Weiss México</b><span>[CIUDAD Y DIRECCIÓN]</span></div>
+      <a href="https://www.instagram.com/weissburger.mex/" target="_blank" rel="noopener">@weissburger.mex</a>
+    </div>
+  </div>
+</section>
+
+<!-- FRANQUICIAS -->
+<section class="franq" id="franquicias">
+  <div class="franq__tri" aria-hidden="true"></div>
+  <div class="franq__copy">
+    <h2>¿UN WEISS EN<br><span>TU CIUDAD?</span></h2>
+    <p>Somos 27 locales y vamos por más. Si querés abrir una franquicia Weiss, escribinos.</p>
+    <a class="btn btn--carbon" href="#franquicias">Quiero mi Weiss · [LINK FRANQUICIAS]</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <img src="img/logo-badge-blanco.png" alt="Weiss · Homemade burgers from Patagonia" width="130" height="130" loading="lazy">
+    <div class="footer__cols">
+      <div><b>Seguinos</b><a href="https://www.instagram.com/weissburger.ar/" target="_blank" rel="noopener">@weissburger.ar</a><a href="https://www.instagram.com/weissburger.uy/" target="_blank" rel="noopener">@weissburger.uy</a><a href="https://www.instagram.com/weissburger.mex/" target="_blank" rel="noopener">@weissburger.mex</a><a href="https://www.tiktok.com/@weissburger" target="_blank" rel="noopener">TikTok</a></div>
+      <div><b>Weiss</b><a href="#carta">Carta</a><a href="#burga-del-mes">Burga del mes</a><a href="#locales">Locales</a><a href="#franquicias">Franquicias</a></div>
+      <div><b>Pedí</b><a href="https://linktr.ee/weissburger" target="_blank" rel="noopener">PedidosYa · Rappi · Pedix</a><a href="https://tr.ee/U2ODkXgbwZ" target="_blank" rel="noopener">Weiss Coffee</a></div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© <span class="js-year">2026</span> Weiss Burger · Homemade burgers from Patagonia</span>
+    <span class="credit">Sitio desarrollado por <a href="https://alejomfernandez.com.ar" target="_blank" rel="noopener">Alejo Martín Fernández</a></span>
+  </div>
+</footer>
+
+<script src="js/locales-data.js?v=2"></script>
+<script src="js/main.js?v=2"></script>
+</body>
+</html>
