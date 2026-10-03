@@ -285,6 +285,34 @@ button{font:inherit;color:inherit}
 .credit a{color:var(--hueso);font-weight:600;text-underline-offset:3px}
 .credit a:hover{color:var(--mostaza)}
 
+
+/* ============ INTRO (smash) ============ */
+#intro{display:none}
+html.intro{overflow:hidden}
+html.intro #intro{display:block}
+.intro{position:fixed;inset:0;z-index:200;background:var(--carbon);overflow:hidden}
+.intro.out{animation:introUp .65s cubic-bezier(.7,0,.3,1) forwards}
+@keyframes introUp{to{transform:translateY(-100%)}}
+.intro__stage{position:absolute;left:50%;top:50%;width:600px;height:600px;margin:-300px 0 0 -300px;transform:scale(var(--s,1))}
+.intro__ball{position:absolute;left:50%;top:300px;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#a0573a,#5c2a17 55%,#3a180b);animation:iFall .5s cubic-bezier(.55,0,1,.45) .15s both,iSmash .35s cubic-bezier(.2,.9,.3,1.2) .65s forwards}
+@keyframes iFall{from{transform:translateY(-520px)}to{transform:none}}
+@keyframes iSmash{0%{transform:none}40%{width:360px;height:46px;margin:-23px 0 0 -180px;border-radius:50%}100%{width:320px;height:58px;margin:-29px 0 0 -160px;border-radius:46% 46% 40% 40%;background:radial-gradient(ellipse at 50% 30%,#8a4529,#4a200f 70%)}}
+.intro__drop{position:absolute;left:50%;top:300px;width:10px;height:10px;border-radius:50%;background:var(--mostaza);opacity:0;animation:iBurst .55s ease-out .65s forwards}
+@keyframes iBurst{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.3)}}
+.intro__steam{position:absolute;left:50%;top:268px;width:6px;height:40px;margin-left:-3px;border-radius:6px;background:linear-gradient(transparent,rgba(255,255,255,.35));opacity:0;animation:iSteam 1.2s ease-out .85s forwards}
+@keyframes iSteam{0%{opacity:0;transform:translateY(0)}30%{opacity:1}100%{opacity:0;transform:translateY(-80px) scaleX(2)}}
+.intro__ched{position:absolute;left:50%;top:252px;width:230px;height:40px;margin-left:-115px;background:var(--mostaza);border-radius:6px 6px 18px 18px;opacity:0;animation:iChed .45s cubic-bezier(.2,.9,.3,1.2) 1.05s forwards}
+.intro__ched::after{content:"";position:absolute;left:30px;bottom:-22px;width:24px;height:30px;background:var(--mostaza);border-radius:0 0 12px 12px;box-shadow:120px -4px 0 -3px var(--mostaza)}
+@keyframes iChed{from{opacity:1;transform:translateY(-320px) rotate(-8deg)}to{opacity:1;transform:none}}
+.intro__logo{position:absolute;left:50%;top:110px;width:260px;height:auto;margin-left:-130px;clip-path:inset(0 100% 0 0);animation:iWrite .7s ease-out 1.5s forwards}
+@keyframes iWrite{to{clip-path:inset(0 0 0 0)}}
+.intro__tag{position:absolute;left:0;right:0;top:410px;text-align:center;font-weight:800;letter-spacing:4px;font-size:13px;color:var(--cuero);opacity:0;animation:iFade .4s ease-out 1.95s forwards}
+@keyframes iFade{to{opacity:1}}
+.intro__skip{all:unset;cursor:pointer;position:absolute;right:20px;bottom:20px;font-size:13px;font-weight:800;color:var(--gris);padding:10px 14px;border-radius:99px;border:1.5px solid #333}
+.intro__skip:hover{color:var(--hueso);border-color:var(--hueso)}
+.intro__skip:focus-visible{outline:2px solid var(--mostaza);outline-offset:2px}
+html.intro .hero *,html.intro .hero{animation-play-state:paused!important}
+
 /* reveal on scroll */
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
 .rv.in{opacity:1;transform:none}

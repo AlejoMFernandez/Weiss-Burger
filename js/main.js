@@ -13,6 +13,26 @@
     return n;
   }
 
+
+  /* ---------- INTRO smash ---------- */
+  (function () {
+    var root = document.documentElement, box = document.getElementById('intro');
+    if (!box || !root.classList.contains('intro')) return;
+    var stage = box.querySelector('.intro__stage'), done = false;
+    function fit() { stage.style.setProperty('--s', Math.min(1, window.innerWidth / 620, window.innerHeight / 620).toFixed(3)); }
+    fit(); window.addEventListener('resize', fit);
+    function finish(fast) {
+      if (done) return; done = true;
+      try { sessionStorage.setItem('weissIntro', '1'); } catch (e) {}
+      box.classList.add('out');
+      setTimeout(function () { root.classList.remove('intro'); box.remove(); }, fast ? 450 : 650);
+    }
+    var t = setTimeout(function () { finish(false); }, 2600);
+    function skip() { clearTimeout(t); finish(true); }
+    box.addEventListener('click', skip);
+    document.addEventListener('keydown', function k(e) { if (e.key === 'Escape' || e.key === 'Enter' || e.key === ' ') { skip(); document.removeEventListener('keydown', k); } });
+  })();
+
   /* ---------- NAV ---------- */
   var nav = $('#nav'), burger = $('#burger'), links = $('#navLinks');
   function onScroll() { nav.classList.toggle('is-solid', window.scrollY > 30); }

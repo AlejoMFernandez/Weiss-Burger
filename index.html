@@ -12,9 +12,21 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3">
+<link rel="stylesheet" href="css/styles.css?v=4">
+<script>(function(){try{var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!r&&!sessionStorage.getItem('weissIntro'))document.documentElement.classList.add('intro');}catch(e){}})();</script>
 </head>
 <body>
+
+<div id="intro" class="intro" aria-hidden="true">
+  <div class="intro__stage">
+    <div class="intro__ball"></div><span class="intro__drop" style="--dx:-170px;--dy:-60px"></span><span class="intro__drop" style="--dx:-120px;--dy:-110px"></span><span class="intro__drop" style="--dx:-60px;--dy:-140px"></span><span class="intro__drop" style="--dx:60px;--dy:-140px"></span><span class="intro__drop" style="--dx:130px;--dy:-100px"></span><span class="intro__drop" style="--dx:180px;--dy:-50px"></span><span class="intro__drop" style="--dx:-200px;--dy:10px"></span><span class="intro__drop" style="--dx:210px;--dy:20px"></span>
+    <span class="intro__steam" style="margin-left:-60px"></span><span class="intro__steam"></span><span class="intro__steam" style="margin-left:54px;animation-delay:.85s"></span>
+    <div class="intro__ched"></div>
+    <img class="intro__logo" src="img/logo-script-blanco.png" alt="" width="260" height="114">
+    <div class="intro__tag">SMASH BURGERS · DESDE 2018</div>
+  </div>
+  <button class="intro__skip" id="introSkip" type="button">Saltar</button>
+</div>
 
 <header class="nav" id="nav">
   <a href="#inicio" class="nav__logo" aria-label="Weiss, inicio"><img src="img/logo-script-blanco.png" alt="Weiss" width="128" height="56"></a>
@@ -186,6 +198,6 @@
 </footer>
 
 <script src="js/locales-data.js?v=3"></script>
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>
